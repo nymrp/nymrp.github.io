@@ -37,7 +37,8 @@ li {
 .box-note,
 .box-warning,
 .box-error,
-.box-success {
+.box-success,
+.box-bad {
   padding: 0.9375rem 0.9375rem 0.9375rem 0.625rem;
   margin: 1.25rem 1.25rem 1.25rem 0.3125rem;
   border: 1px solid #000000;
@@ -47,7 +48,22 @@ li {
 
 .box-note {
   background-color: rgb(63, 63, 63);
-  border-left-color: #7934b8;
+  border-left-color: #1f4d00;
+}
+
+.box-bad {
+  background-color: rgb(63, 63, 63);
+  border-left-color: #550000;
+}
+
+.box-me {
+  font-family: 'Lato', sans-serif;
+  padding: 0.45vw; margin: 0.05vw; background-color: rgba(175,163,203,255); opacity: 0.7; border-radius: 10px; display:inline-block;
+}
+
+.box-do {
+  font-family: 'Lato', sans-serif;
+  padding: 0.45vw; margin: 0.05vw; background-color: rgba(191, 191, 191,255); opacity: 0.7; border-radius: 10px; display:inline-block;
 }
 
 #rule {
@@ -71,6 +87,7 @@ li a, .dropbtn {
 
 li a:hover, .dropdown:hover .dropbtn {
   background-color: #7934b8;
+  border-radius: 8px;
 }
 
 li.dropdown {
