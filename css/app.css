@@ -51,19 +51,26 @@ li {
   border-left-color: #1f4d00;
 }
 
+
+
 .box-bad {
   background-color: rgb(63, 63, 63);
   border-left-color: #550000;
 }
 
+.box-ooc {
+  font-family: 'Lato', sans-serif;
+  padding: 0.45vw; margin: 0.05vw; background-color: rgba(99, 99, 99, 0.3); border-radius: 10px; display:inline-block; text-shadow: 2px 2px #000000;
+}
+
 .box-me {
   font-family: 'Lato', sans-serif;
-  padding: 0.45vw; margin: 0.05vw; background-color: rgba(175,163,203,255); opacity: 0.7; border-radius: 10px; display:inline-block;
+  padding: 0.45vw; margin: 0.05vw; background-color: rgba(175,163,203,255); opacity: 1; border-radius: 10px; display:inline-block;
 }
 
 .box-do {
   font-family: 'Lato', sans-serif;
-  padding: 0.45vw; margin: 0.05vw; background-color: rgba(191, 191, 191,255); opacity: 0.7; border-radius: 10px; display:inline-block;
+  padding: 0.45vw; margin: 0.05vw; background-color: rgba(191, 191, 191,255); opacity: 1; border-radius: 10px; display:inline-block;
 }
 
 #rule {
