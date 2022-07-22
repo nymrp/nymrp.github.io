@@ -19,11 +19,13 @@ body {
 }
 
 #navul {
+  width: 100%;
   list-style-type: none;
-  /* margin: 0; */
+  margin: 0;
   padding: 0;
-  /* overflow: hidden; */
-  background-color: #101111;
+  overflow: hidden;
+  background-color: rgb(19, 19, 19);
+  z-index: 9999;
 }
 
 li {
@@ -32,8 +34,8 @@ li {
   text-align: -webkit-match-parent;
   margin: 30px auto;
   margin-top: 5px;
-
 }
+
 .box-note,
 .box-warning,
 .box-error,
@@ -78,6 +80,61 @@ li {
   font-size: 1.265rem;
   float: left;
 }
+
+	
+#logo {
+  transition: transform .2s; /* Animation */
+  margin: 0 auto;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url(assets/logo.png);
+  background-size: 5%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  opacity: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: -1;
+  transform: scale(8.55)
+}
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  margin: 0 auto; 
+  width: 100%;
+  height: 100%;
+  display: block;
+  text-shadow: 2px 1px #000000;
+  color: white;
+  font-size: 17px;
+  text-align: center;
+  font-family: 'Bebas Neue', cursive;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+.video-background {
+  background: #000;
+  position: fixed;
+  top: 0; right: 0; bottom: 0; left: 0;
+  z-index: -99;
+  transform: scale(1.25);
+}
+.video-foreground,
+.video-background iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+
 article {
 	margin: 50px auto;
   margin-top: 20px;
