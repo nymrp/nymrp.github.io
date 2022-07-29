@@ -89,7 +89,7 @@ li {
   width: 100%;
   height: 100%;
   background-image: url(assets/logo.png);
-  background-size: 5%;
+  background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-color: transparent;
@@ -98,7 +98,6 @@ li {
   right: 0;
   top: 0;
   z-index: -1;
-  transform: scale(8.55)
 }
 .center {
   margin-left: auto;
