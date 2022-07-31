@@ -274,6 +274,31 @@ h2.box-desc {
 
 }
 
+h3.boxx-desc {
+
+  color: #AEAEAE;
+
+  font-weight: 100;
+
+  border-radius: 10px;
+
+  background: transparent;
+
+  font-weight: 300;
+
+  margin-top: 30px;
+
+  padding: 15px 25px;
+
+  line-height: 30px;
+
+  font-size: 15px;
+
+  text-align:center;
+
+
+}
+
 .pulse {
   animation: pulse 2s infinite;
 
