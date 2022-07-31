@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/app.css">
+    <title>🗽NYMenaceRP</title>
+    <link rel="icon" type="image/png" href="https://media.discordapp.net/attachments/658652905838084140/1002547354353815552/NYM96.png">
+    <meta content="🗽NYMenaceRP" property="og:title" />
+    <meta content="Pravidlá NYMRP" property="og:description" />
+    <meta content="https://nymrp.cc/" property="og:url" />
+    <meta content="https://media.discordapp.net/attachments/658652905838084140/1002562831293632613/nym.png?width=634&height=634" property="og:image" />
+    <meta content="#7934b8" data-react-helmet="true" name="theme-color" />    
+</head>
+<body>
+    <ul id="navul">
+        <li><a href="https://discord.com/invite/DSEW5xWKT8" target="_blank">Discord</a></li>
+        <li style="margin-bottom: 5px;"><a href="interviewer.html" target="_blank">Interviewer</a></li>
+
+        <li id="nav" class="dropdown">
+            <a id="nav" href="rules" class="dropbtn">Pravidlá</a>
+            <div id="nav" href="rules" class="dropdown-content">
+                <a id="nav" href="rules#:~:text=do%20launchu%20serveru!-,Komunitn%C3%AD%20Pravidla,-Chov%C3%A1n%C3%AD%3A">Komunitní Sekce</a>
+                <a id="nav" href="rules#:~:text=spojen%C3%AD%20s%20NYM.-,Hern%C3%AD%20Pravidla,-In%20Character">Herní Sekce</a>
+                <a id="nav" href="rules#:~:text=Schvaluji%20si%20CK.-,Slovn%C3%ADk%20NYM,-/me">Slovník</a>
+            </div>
+        </li>
+        <li id="nav" ><a id="nav" href="https://nymrp.cc/">Domov</a></li>
+    </ul>
+    <html>
+  <head>
+    <!-- Bootstrap CSS -->
+  </head>
+  <form class="box" onsubmit="sendContact(event)" method="post">
+    <h1 class="box-title">Pozice Interviewer 🙇</h1>
+	<input type="text" class="box-input" id="discord" name="username" placeholder="Discord #" required />
+    <input type="text" class="box-input" id="proc" name="email" placeholder="Proč Chceš být interviewer?" required />
+    <input type="submit" name="submit" value="Odeslat Žádost" class="box-button" />
+    <h2 class="box-desc" id="buttonsubmit">Zda ti do 48 (2 Dny) hodin po odeslání nepříjde zpráva o příjmutí znamená to, že jsi nebyl přijat.</h2>
+
+</form>
+    <script>
+      async function sendContact(ev) {
+        ev.preventDefault();
+
+            const senderEmail = document.getElementById('discord').value;
+        const senderMessage = document.getElementById('proc').value;
+      
+        const webhookBody = {
+        embeds: [{
+        title: 'Interviewer Přihláška',
+        fields: [
+            { name: 'Sender', value: senderEmail },
+            { name: 'Why?', value: senderMessage }
+        ]
+    }],
+};
+
+const webhookUrl = 'https://discord.com/api/webhooks/1003356543217049630/a9daUExuvFpsC42RJ6uqfpYwHW93a4NecsahJxXAhmW3r3OrswvJcmKSPmJpiIvrb6sa';
+
+const response = await fetch(webhookUrl, {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify(webhookBody),
+});
+
+if (response.ok) {
+    const senderEmail = document.getElementById('discord');
+    const senderMessage = document.getElementById('proc');
+    const element = document.getElementById('buttonsubmit');
+    senderEmail.value = '';
+    element.classList.add("pulse");
+
+    senderMessage.value = '';
+} else {
+  alert('There was an error! Try again later!');
+}
+    
+    }
+
+
+
+    </script>
+</html>
+</body>
+</html>
